@@ -9,9 +9,9 @@ ADRs are proposed and accepted using the github pull request system. ADRs go thr
 - *In development* - Developed in a draft PR.
 - *Proposal* - Feedback is gathered on the pull request. Once the PR is approved, it can be merged by its author. 
 - *Active* - An ADR that has been merged into the `main` branch.
-- *Superceded* - A new ADR is accepted to replace the old one, and the superceded ADR is linked to the new ADR.
+- *Superceded* - A new ADR is accepted to replace the old one and the superceded ADR is linked to the new ADR.
 
-A PR can be created to modify an existing ADR to clarify meaning and add to the description. However if a decision is being reversed the existing ADR should be superceded and a new one created to replace it.
+A PR can be created to modify an existing ADR to clarify meaning and add to the description. However, if a decision is being reversed the existing ADR should be superceded and a new one created to replace it.
 
 ## Format 
 
@@ -21,4 +21,4 @@ Each ADR will be created in github markdown, using the template set out in [temp
 
 ### Naming
 
-Each ADR is given a sequental and monotonically increasing number, `#`. Numbers will not be reused. Each ADR will use a filename in the format: `ADR-# Short description of ADR.md`.
+Each ADR is given a sequential and monotonically increasing number, `#`. Numbers will not be reused. Each ADR will use a filename in the format: `ADR-# Short description of ADR.md`.
