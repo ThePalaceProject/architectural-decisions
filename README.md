@@ -1,4 +1,4 @@
-# Architectual Decision Records
+# Architectural Decision Records
 
 This repository is used to collect decision records recording "architecturally significant" decisions made in the Palace Project: those that affect the structure, non-functional characteristics, dependencies, interfaces, or construction techniques.
 
