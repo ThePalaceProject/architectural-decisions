@@ -1,4 +1,4 @@
-# ADR-# Short Description
+# ADR-### Short Description
 
 | Property        | Value                                 |
 | --              | --                                    |
@@ -12,7 +12,7 @@
 
 ## Alternatives Considered
 
-*Any alternatives considered any details about why they were set aside.*
+*Any alternatives considered and any details about why they were set aside.*
 
 ## Decision
 
