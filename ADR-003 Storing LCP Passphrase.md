@@ -1,10 +1,10 @@
 # ADR-003 Storing LCP Passphrase for Offline Reading
 
-| Property        | Value                                 |
-| --              | --                                    |
-| *Components*    | iOS, Android   |
-| *Related*       |            |
-| *Superceded by* |  | 
+| Property        | Value        |
+| --              | --           |
+| *Components*    | iOS, Android |
+| *Related*       |              |
+| *Superceded by* |              |
 
 ## Context
 
@@ -17,12 +17,55 @@
 
 ## Alternatives Considered
 
-*Any alternatives considered any details about why they were set aside.*
+An alternative to storing the passphrase is to avoid storing it, and to
+retrieve it each time the book is opened for reading. This was rejected
+for the following reasons:
+
+  - It causes the protection to "fail closed": If the network is unavailable,
+    the user can't read the book.
+
+  - Readium 2 will indefinitely cache the passphrase on first use anyway,
+    meaning that any user attempting to locate the passphrase could simply
+    look in Readium 2's internal storage and ignore any protection the host
+    application was attempting to add.
 
 ## Decision
 
-*What is the change that we're proposing and/or doing? This may have several subsections giving more detail about the decision.*
+### Android
+
+In the Android application, we chose to store the hashed passphrase for the
+content in the application-private book database. The passphrase will
+be deleted along with the book whenever the application discovers that the
+loan for the book has expired.
+
+We decided against any stronger form of protection as we discovered that the
+underlying Readium 2 library used to read EPUB files will cache passphrases
+indefinitely in its own private database. Additionally, whilst users would
+require root access to their devices in order to extract passphrases from
+the application's storage, sufficiently competent authenticated users could
+also simply view the OPDS feed containing the hashed passphrases using standard
+tools such as `curl`. Discussion with the Readium 2 team indicated that the
+passphrase is not considered particularly sensitive information:
+
+> Laurent Le Meur:
+>
+> As far as validation goes, storing the hash of the passphrase in the client
+> db is ok. If somebody gets it, the only risk is that this license will be
+> overshared and then revoked.
+
+> Hadrien Gardeur:
+>
+> Holding onto the passphrase is a best practice among LCP based apps as the
+> goal is to make things easier for the user.
+
+### iOS
+
+TODO!
 
 ## Consequences
 
 *What becomes easier or more difficult to do because of this change?*
+
+- Books can be decrypted during reading automatically without the user ever
+  even realizing the books are encrypted and protected with a passphrase.
+- Books can be read even if the network is unavailable.
