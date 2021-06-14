@@ -15,20 +15,6 @@
     - unprotected content or
     - protected content along with the associated passphrase.
 
-## Alternatives Considered
-
-An alternative to storing the passphrase is to avoid storing it, and to
-retrieve it each time the book is opened for reading. This was rejected
-for the following reasons:
-
-  - It causes the protection to "fail closed": If the network is unavailable,
-    the user can't read the book.
-
-  - Readium 2 will indefinitely cache the passphrase on first use anyway,
-    meaning that any user attempting to locate the passphrase could simply
-    look in Readium 2's internal storage and ignore any protection the host
-    application was attempting to add.
-
 ## Decision
 
 ### Android
@@ -61,6 +47,20 @@ passphrase is not considered particularly sensitive information:
 ### iOS
 
 TODO!
+
+## Alternatives Considered
+
+An alternative to storing the passphrase is to avoid storing it, and to
+retrieve it each time the book is opened for reading. This was rejected
+for the following reasons:
+
+- It causes the protection to "fail closed": If the network is unavailable,
+  the user can't read the book.
+
+- Readium 2 will indefinitely cache the passphrase on first use anyway,
+  meaning that any user attempting to locate the passphrase could simply
+  look in Readium 2's internal storage and ignore any protection the host
+  application was attempting to add.
 
 ## Consequences
 
