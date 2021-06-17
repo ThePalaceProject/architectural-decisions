@@ -46,7 +46,9 @@ passphrase is not considered particularly sensitive information:
 
 ### iOS
 
-TODO!
+In the iOS application, passphrases are managed by the ReadiumLCP framework. When Readium 2 opens an encrypted asset and tries to read the license file, the ReadiumLCP framework iterates over the available passphrases to decrypt the license. When it cannot find a matching passphrase, the application tries to get a passphrase from the hint in the license file and, in case the hint contains a passphrase, returns the passphrase to the authentication service. This way passphrase is stored in the ReadiumLCP local database only.
+
+ReadiumLCP framework code analysis shows that it stores passphrases indefinitely and never deletes them.
 
 ## Alternatives Considered
 
