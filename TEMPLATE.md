@@ -1,5 +1,7 @@
 # ADR-### Short Description
 
+| Property        | Value                                 |
+| --              | --                                    |
 | *Status*        | In development                        |
 | *Components*    | Options: Backend, Web, iOS, Android   |
 | *Related*       | Links to any related ADRs             |
