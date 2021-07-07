@@ -1,18 +1,13 @@
 # ADR-### Short Description
 
-| Property        | Value                                 |
-| --              | --                                    |
+| *Status*        | In development                        |
 | *Components*    | Options: Backend, Web, iOS, Android   |
 | *Related*       | Links to any related ADRs             |
 | *Superceded by* | Link to ADR that supercedes this one. | 
 
 ## Context
 
-*What is the issue that we're seeing that is motivating this decision or change?*
-
-## Alternatives Considered
-
-*Any alternatives considered and any details about why they were set aside.*
+*What is the issue that is motivating this decision or change?*
 
 ## Decision
 
@@ -20,8 +15,8 @@
 
 ## Alternatives Considered
 
-*Any alternatives considered any details about why they were set aside.*
+*Any alternatives considered and any details about why they were set aside.*
 
 ## Consequences
 
-*What becomes easier or more difficult to do because of this change?*
+*What becomes easier or more difficult because of this change?*
