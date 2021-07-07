@@ -1,4 +1,4 @@
-# ADR-# Short Description
+# ADR-### Short Description
 
 | Property        | Value                                 |
 | --              | --                                    |
@@ -9,6 +9,10 @@
 ## Context
 
 *What is the issue that we're seeing that is motivating this decision or change?*
+
+## Alternatives Considered
+
+*Any alternatives considered and any details about why they were set aside.*
 
 ## Decision
 

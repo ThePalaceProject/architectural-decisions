@@ -21,4 +21,4 @@ Each ADR will be created in github markdown, using the template set out in [temp
 
 ### Naming
 
-Each ADR is given a sequential and monotonically increasing number, `#`. Numbers will not be reused. Each ADR will use a filename in the format: `ADR-# Short description of ADR.md`.
+Each ADR is given a sequential, monotonically increasing, zero-padded three-digit number, `###`. Numbers will not be reused. Each ADR will use a filename in the format: `ADR-### Short description of ADR.md`.
