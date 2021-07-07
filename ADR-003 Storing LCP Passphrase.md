@@ -2,6 +2,7 @@
 
 | Property        | Value        |
 | --              | --           |
+| *Status*        | Active       |
 | *Components*    | iOS, Android |
 | *Related*       |              |
 | *Superceded by* |              |
